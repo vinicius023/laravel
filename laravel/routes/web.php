@@ -25,9 +25,9 @@ Route::get('/', function () {
 });
 
 // Route com valor dinamico
-Route::get('hello-world/{name}', 'HelloControler@index');
+//Route::get('hello-world/{name}', 'HelloController@index');
 
-// Route com valor padrao
-//Route::get('hello-world/{name?}', function ($name = "Mundo") {
-//	return "Olá " . $name;
-//});
+// Route com valor padrao ou opcional
+Route::get('hello-world/{name?}', function ($name = "Mundo") {
+	return "Olá " . $name;
+});
