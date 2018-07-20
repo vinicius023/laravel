@@ -28,6 +28,6 @@ Route::get('/', function () {
 //Route::get('hello-world/{name}', 'HelloController@index');
 
 // Route com valor padrao ou opcional
-Route::get('hello-world/{name?}', function ($name = "Mundo") {
-	return "Olá " . $name;
-});
+Route::get('hello/{name?}', 'HelloController@index');
+Route::post('hello/{name?}', 'HelloController@render');
+Route::resource('pages', 'Admin\PagesController');
