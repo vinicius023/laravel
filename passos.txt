@@ -25,6 +25,7 @@ Comando uteis
     OBS: caso tenha problemas utilizar os seguintes comandos
     
         php artisan config:clear
+        
         php artisan config:cache
     
     criar um controller
