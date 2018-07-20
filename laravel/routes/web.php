@@ -9,8 +9,25 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+** Funções Basicas
+ *
+ * get('rota', function() {});
+ * post('rota', function() {});
+ * delete('rota', function() {});
+ * path('rota', function() {});
+ * options('rota', function() {});
+ * match(['get', 'post'], 'rota', function() {});
+ *
 */
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route com valor dinamico
+Route::get('hello-world/{name}', 'HelloControler@index');
+
+// Route com valor padrao
+//Route::get('hello-world/{name?}', function ($name = "Mundo") {
+//	return "Olá " . $name;
+//});
