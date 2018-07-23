@@ -28,6 +28,11 @@ Route::get('/', function () {
 //Route::get('hello-world/{name}', 'HelloController@index');
 
 // Route com valor padrao ou opcional
-Route::get('hello/{name?}', 'HelloController@index');
+Route::get('hello/{name?}', 'HelloController@index')->name('hello.index');
 Route::post('hello/{name?}', 'HelloController@render');
 Route::resource('pages', 'Admin\PagesController');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

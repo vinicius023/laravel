@@ -51,3 +51,7 @@ Comando uteis
     criando registros de teste no banco
 
         php artisan db:seed
+
+    criando paginacao manual
+
+        php artisan vendor:publish --tag=laravel-pagination
