@@ -55,3 +55,19 @@ Comando uteis
     criando paginacao manual
 
         php artisan vendor:publish --tag=laravel-pagination
+
+    Autenticacao
+
+        php artisan make:auth
+
+    utilizando comando de gerenciamento de banco de dados com artisan tinker
+
+        php artisan tinker 
+
+    clonando repositorio laravel em outra maquina
+        
+        apagar pasta vendor e arquivo composer.lock
+
+        composer install
+        composer dump
+        composer update

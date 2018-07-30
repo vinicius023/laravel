@@ -10,13 +10,17 @@
 
     {!! $page->body !!}
 
-    <a href="{{ route('pages.index') }}" class="btn btn-primary btn-sm">voltar</a>
-    <a href="{{ route('pages.edit', $page->id) }}" class="btn btn-primary btn-sm">editar</a>
 
-    <form action="{{ route('pages.destroy', $page->id) }}" class="form-group row" method="post" style="display: contents;">
-        {!! csrf_field() !!}
-        <input type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="remover" class="btn btn-primary btn-sm">
-    </form>
+    <div class="container" style="border-top: 2px solid lightgray; padding-top: 2rem;">
+
+        <a href="{{ route('pages.index') }}" class="btn btn-primary btn-sm">voltar</a>
+        <a href="{{ route('pages.edit', $page->id) }}" class="btn btn-primary btn-sm">editar</a>
+
+        <form action="{{ route('pages.destroy', $page->id) }}" class="form-group row" method="post" style="display: contents;">
+            {!! csrf_field() !!}
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="remover" class="btn btn-primary btn-sm">
+        </form>
+    </div>
 
 @endcomponent

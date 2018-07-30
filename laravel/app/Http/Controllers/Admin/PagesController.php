@@ -38,7 +38,7 @@ class PagesController extends Controller
     public function store(Request $request)
     {
         Page::create($request->all());
-        return response()->redirectTo('pages.index');
+        return response()->redirectToRoute('pages.index');
     }
 
     /**
