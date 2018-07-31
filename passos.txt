@@ -13,6 +13,10 @@ Após instalar o composer
     criando um novo projeto Laravel
 
         composer create-project laravel/laravel ou composer create-project laravel/laravel nome_projeto
+                
+        ou criar com versoes de bibliotecas estaveis
+
+        composer create-project --prefer-dist laravel/laravel ou composer create-project laravel/laravel:versao.laravel nome_projeto
 
     iniciando servidor local
 
@@ -71,3 +75,14 @@ Comando uteis
         composer install
         composer dump
         composer update
+
+Autenticacao nos browsers
+
+    http - não mantem o estado
+    sessao - guarda info no servidor
+    cookie da sessao - guarda info no servidor
+    cookies - guarda info no cliente
+
+    instalando pacote de traducao
+        
+        composer require caouecs/laravel-lang
